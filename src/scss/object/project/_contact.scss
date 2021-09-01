@@ -1,0 +1,44 @@
+.p-contact {
+  position: relative;
+
+  &__contents {
+    min-height: 100vh;
+    margin: 0 auto;
+    padding-top: 15vh;
+    @include mq(o-sp) {
+      width: 500px;
+    }
+    @include mq(u-sp) {
+      width: 98%;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+  }
+
+  &__row {
+    margin-top: 20px;
+  }
+
+  &__title {
+    font-size: 1rem;
+  }
+
+  &__require {
+    font-size: 0.5rem;
+  }
+
+  &__inputItem {
+    width: 100%;
+    background-color: $colorGray;
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__inputContent {
+    height: 50%;
+  }
+}

@@ -1,0 +1,79 @@
+.p-works {
+  &__box {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  &__title {
+    padding-top: 13vh;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  &__wrap {
+    position: absolute;
+    top: 25%;
+    display: flex;
+    height: 50vh;
+    flex-wrap: nowrap;
+
+    &:hover ul {
+      animation-play-state: paused;
+    }
+
+    &.is-stop ul {
+      animation-play-state: paused;
+    }
+  }
+
+  &__list {
+    display: flex;
+    backface-visibility: hidden;
+    will-change: transform;
+    &:first-child {
+      animation: loop 50s -25s linear infinite;
+    }
+    &:last-child {
+      animation: loop2 50s linear infinite;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 10px;
+    height: 50vh;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
+  }
+
+  &__img {
+    height: 50vh;
+    width: auto;
+  }
+
+  &__text {
+    margin-top: 5px;
+    color: #333;
+    text-align: center;
+  }
+
+  &__bg {
+    background-position: center;
+    background-size: cover;
+
+    &--01{
+  background-image: url("#{$bgPath}image-works-01.png");
+}
+    &--02{
+  background-image: url("#{$bgPath}image-works-02.png");
+}
+    &--03{
+  background-image: url("#{$bgPath}image-works-03.png");
+}
+    &--04{
+  background-image: url("#{$bgPath}image-works-04.png");
+}
+  }
+}

@@ -1,0 +1,32 @@
+.p-top {
+  &__item {
+    position: relative;
+  }
+
+  &__heroBox {
+    position: relative;
+    height: 100vh;
+  }
+
+  &__hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__about {
+    display: block;
+    width: 50vw;
+    height: 50vw;
+    max-width: 60vh;
+    max-height: 60vh;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: $colorGray;
+    background-image: url("#{$bgPath}image-menu-01.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
