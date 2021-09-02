@@ -42,14 +42,6 @@ module.exports = (env, argv) => {
         filename: "index.html",
         template: "src/ejs/index.ejs",
       }),
-      new HtmlWebpackPlugin({
-        filename: "about.html",
-        template: "src/ejs/about/index.ejs",
-      }),
-      new HtmlWebpackPlugin({
-        filename: "works.html",
-        template: "src/ejs/works/index.ejs",
-      }),
       // php
       new CopyWebpackPlugin([
         {
