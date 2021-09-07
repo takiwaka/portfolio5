@@ -19,9 +19,6 @@
         </div>
     </div>
 
-    <div id="main">
-        <!--ここにReactで生成したソーレンダリングされる-->
-    </div>
 
     <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -33,16 +30,6 @@
         )
         ReactDOM.render(el, dom);
 
-        class MyComponent extends React.Component {
-            render() {
-                return (
-                    <div>
-                        <h1>Hello! World.</h1>
-                        <p>このページはテストページです。</p>
-                    </div>
-                )
-            }
-        }
 
         ReactDOM.render(
             <MyComponent />,
