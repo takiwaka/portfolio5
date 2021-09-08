@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Load from './Load'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+interface Props {}
+
+interface State {
+  message: string;
+}
+
+class App extends React.Component<Props,State> {
+  constructor(props:Props){
+    super(props);
+
+    this.state = {
+      message:"最初のメッセージ"
+    };
+
+this.handClick = this.handClick.bind(this);
+
+handClick(){
+  this.setState({
+    message:"ボタンが押されました"
+  });
+}
+
+  }
+  render() {
+    return (
+      <React.Fragment>
+        <p>Hello world</p>
+        <Load num={"5"} />
+
+        <p>{this.state.message}</p>
+        <button onclick={this.handClick}>ボタン</button>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
