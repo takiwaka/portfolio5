@@ -1,6 +1,4 @@
 import React from "react";
-import Load from './Load'
-import cssTest from './test.module.css';
 
 interface Props { }
 
@@ -33,15 +31,6 @@ class App extends React.Component<Props, State> {
 
         <p>{this.state.message}</p>
         <button onClick={this.handleClick}>ボタン</button>
-      </React.Fragment>
-    );
-  };
-
-  render() {
-    return (
-      <React.Fragment>
-        <p className={cssTest.text}>これはテストですと。</p>
-
       </React.Fragment>
     );
   };
