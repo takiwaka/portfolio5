@@ -26,5 +26,5 @@ LP用基本的なパーツ構成(html/css)
 webpack/ejs/BEM/SCSS/jQuery,Plugin/FontAwesome(バンドル)/GoogleFORM
 
 ### ポートフォリオ４
-マルチページ/PHP/サーバーレンタル
+マルチページ/PHP(簡易な問い合わせフォーム)/サーバーレンタル
 
