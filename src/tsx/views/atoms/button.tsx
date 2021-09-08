@@ -1,4 +1,4 @@
-mport React from 'react'
+import React from 'react'
 import { css } from '@emotion/core'
 
 export const Button = props => {
