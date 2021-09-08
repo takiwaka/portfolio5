@@ -13,8 +13,6 @@ http://13.114.58.181/　(使用予定のドメイン移管中)
 
 ・TypeScript
 
-・CSS in JS
-
 ## 過去導入
 ### ポートフォリオ１
 BOOTSTRAP
