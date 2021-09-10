@@ -1,25 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Styled from "styled-components";
+
+import { Button } from "components/button";
+
+const Container = Styled.div`
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #F5F5F5;
+`;
+
+const Label = Styled.div`
+  margin: 10px;
+  width: 40px;
+  text-align: center;
+`;
 
 function App() {
+  const [count, setCount] = useState(0);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Button
+        label="-"
+        backgroundColor="#FF1744"
+        onClick={() => setCount(count - 1)}
+      />
+      <Label>{count}</Label>
+      <Button
+        label="+"
+        backgroundColor="#304FFE"
+        onClick={() => setCount(count + 1)}
+      />
+    </Container>
   );
 }
 
