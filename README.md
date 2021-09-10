@@ -1,1 +1,1 @@
-http://takiwaka.com/#top
+http://takiwaka.com
