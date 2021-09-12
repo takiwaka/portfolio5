@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Styled from "styled-components";
-
-import { Button } from "Components/Button";
+import { Header } from "Components/Layouts/header";
 
 const Container = Styled.div`
   display: flex;
@@ -21,13 +20,13 @@ function App() {
   const [count, setCount] = useState(0);
   return (
     <Container>
-      <Button
+      <Header
         label="-"
         backgroundColor="#FF1744"
         onClick={() => setCount(count - 1)}
       />
       <Label>{count}</Label>
-      <Button
+      <Header
         label="+"
         backgroundColor="#304FFE"
         onClick={() => setCount(count + 1)}
