@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './Style/reset.css';
+import './Style/reset.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
