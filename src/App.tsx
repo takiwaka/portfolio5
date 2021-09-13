@@ -1,38 +1,30 @@
 import React, { useState } from "react";
-import Styled from "styled-components";
-import { Header } from "Components/Layouts/header";
+import TaskList from "Components/Parts/TaskList";
+import TaskInput from "Components/Parts/TaskInput";
+import { Task } from "Types";
 
-const Container = Styled.div`
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background-color: #F5F5F5;
-`;
+const initialState: Task[] = [
+  {
+    id: 2,
+    title: "次のTodo",
+    done: false,
+  },
+  {
+    id: 1,
+    title: "最初のTodo",
+    done: true,
+  },
+];
 
-const Label = Styled.div`
-  margin: 10px;
-  width: 40px;
-  text-align: center;
-`;
+const App: React.FC = () => {
+  const [tasks, setTasks] = useState(initialState);
 
-function App() {
-  const [count, setCount] = useState(0);
   return (
-    <Container>
-      <Header
-        label="-"
-        backgroundColor="#FF1744"
-        onClick={() => setCount(count - 1)}
-      />
-      <Label>{count}</Label>
-      <Header
-        label="+"
-        backgroundColor="#304FFE"
-        onClick={() => setCount(count + 1)}
-      />
-    </Container>
+    <div>
+      <TaskInput />
+      <TaskList tasks={tasks} />
+    </div>
   );
-}
+};
 
 export default App;
