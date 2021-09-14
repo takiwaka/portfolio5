@@ -4,7 +4,7 @@ import { Task } from "Types";
 
 type Props = {
   tasks: Task[]
-  setTasks: React.Dispatch.SetStateAction<Task[]>
+    setTasks: React.Dispatch<React.SetStateAction<Task[]>>
 }
 
 const TaskList = ({ tasks, setTasks }:Props) => {
@@ -26,7 +26,7 @@ const TaskList = ({ tasks, setTasks }:Props) => {
   return (
     <div className="inner">
       {
-        Ftasks.length <= 0 ? "登録されたTODOはありません。" :
+        tasks.length <= 0 ? "登録されたTODOはありません。" :
           <ul className="task-list">
             {tasks.map(task => (
               <TaskItem

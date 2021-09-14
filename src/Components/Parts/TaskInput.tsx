@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Styled from 'styled-Components';
 import { Task } from "Types";
-components
+import styled from 'styled-components';
+
 type Props = {
   setTasks: React.Dispatch<React.SetStateAction<Task[]>>
   tasks: Task[]
@@ -23,6 +23,10 @@ const TaskInput= ({ setTasks, tasks }:Props) => {
       title: inputTitle,
       done: false
     }
+
+    setTasks([newTask, ...tasks])
+    setInputTitle('')
+
   }
 
   return (
@@ -50,13 +54,13 @@ background: #f9f3ee;
 padding: 40px 0;
 border-bottom: 1px solid #d7d2cd;
 `
-const Inner = styed.div`
+const Inner = styled.div`
 display: flex;
 position: relative;
 max-width: 700px;
 margin: 0 auto;
 `
-const Input = styed.input`
+const Input = styled.input`
 width: 80%;
 font-size: 15px;
 outline: none;
