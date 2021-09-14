@@ -1,8 +1,8 @@
 import React from "react";
 import { Task } from "Types";
 
-type Props = {
-  task: Task
+type Props = {　　//型宣言
+  task: Task　　　// Types.tsxからTaskの型を参照する
   handleDone: (task: Task) => void
   handleDelete: (task: Task) => void
 }
