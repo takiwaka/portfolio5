@@ -6,7 +6,7 @@ type Props = {
   tasks: Task[]
 }
 
-const TaskInput: React.FC<Props> = ({ setTasks, tasks }) => {
+const TaskInput= ({ setTasks, tasks }:Props) => {
   const [inputTitle, setInputTitle] = useState<string>("")
   const [count, setCount] = useState<number>(tasks.length + 1)
 

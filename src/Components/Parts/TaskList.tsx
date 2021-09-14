@@ -7,7 +7,7 @@ type Props = {
   setTasks: React.Dispatch.SetStateAction<Task[]>
 }
 
-const TaskList: React.FC<Props> = ({ tasks, setTasks }) => {
+const TaskList = ({ tasks, setTasks }:Props) => {
 
   const handleDone = (task: Task) => {
     setTasks(prev => prev.map(t =>

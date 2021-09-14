@@ -17,7 +17,7 @@ const initialState: Task[] = [
   },
 ];
 
-const App: React.FC = () => {
+const App = () => {
   const [tasks, setTasks] = useState(initialState);
 
   return (
