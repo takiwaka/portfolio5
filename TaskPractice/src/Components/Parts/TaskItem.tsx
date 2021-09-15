@@ -28,3 +28,5 @@ const TaskItem = ({ task, handleDone, handleDelete }: Props) => {
 };
 
 export default TaskItem;
+
+
