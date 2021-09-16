@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const tasks = [
-  { id: 1, title: "one" },
+  { id: 1, heading: "このページについて",text:"サッポロビールのブランド、HOPPIN' GARAGEへ<br />「い草」を使ったオリジナルビール案を応募したら<br />見事商品化されましたので、その宣伝です。",annotation:"※なお、どんなに売れても私にインセンティブが入る等はありません。本当にただの応援ですｗ(あとサイト作りの練習です)<br />※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)" },
   { id: 2, title: "two" },
   { id: 3, title: "three" },
   { id: 4, title: "four" },
@@ -18,12 +18,12 @@ const Main = () => {
             このページについて
           </Heading>
           <Text>
-            サッポロビールのブランド、HOPPIN' GARAGEへ
-            「い草」を使ったオリジナルビール案を応募したら
-            見事商品化されましたので、その宣伝になります。
+            サッポロビールのブランド、HOPPIN' GARAGEへ<br />
+            「い草」を使ったオリジナルビール案を応募したら<br />
+            見事商品化されましたので、その宣伝です。
           </Text>
           <Annotation>
-            ※なお、どんなに売れても私にインセンティブが入る等はありません。本当にただの応援ですｗ(あとサイト作りの練習です)
+            ※なお、どんなに売れても私にインセンティブが入る等はありません。本当にただの応援ですｗ(あとサイト作りの練習です)<br />
             ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
           </Annotation>
         </Content>
@@ -32,8 +32,13 @@ const Main = () => {
   );
 };
 
+console.log(tasks);
+
 export default Main;
 
+const Inner = styled.div`
+  
+`;
 const Content = styled.div`
   
 `;

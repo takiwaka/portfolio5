@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Hero from "Components/Layouts/Hero"
+import Hero from "Components/Layouts/hero"
 import Main from "Components/Layouts/main";
 
 const Wrap = () => {

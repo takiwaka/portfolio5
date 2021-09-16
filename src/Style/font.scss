@@ -1,63 +1,62 @@
 @font-face {
   font-family: "NotoSansJP-Thin";
   font-weight: thin;
-  src: url("../../assets/fonts/NotoSansJP-Thin.otf");
+  src: url("/Style/fonts/NotoSansJP-Thin.otf") format("otf");
+}
+@font-face {
+  font-family: "NotoSansJP-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/Style/fonts/NotoSansJP-Regular.otf");
 }
 
 @font-face {
-  font-family: 'NotoSansJP-Regular';
+  font-family: "NotoSansJP-Light";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/NotoSansJP-Regular.otf");
+  src: url("/Style/fonts/NotoSansJP-Light.otf");
 }
 
 @font-face {
-  font-family: 'NotoSansJP-Light';
+  font-family: "NotoSansJP-Medium";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/NotoSansJP-Light.otf");
+  src: url("/Style/fonts/NotoSansJP-Medium.otf");
 }
 
 @font-face {
-  font-family: 'NotoSansJP-Medium';
+  font-family: "NotoSansJP-Bold";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/NotoSansJP-Medium.otf");
+  src: url("/Style/fonts/NotoSansJP-Light.otf");
 }
 
 @font-face {
-  font-family: 'NotoSansJP-Bold';
+  font-family: "NotoSansJP-Black";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/NotoSansJP-Light.otf");
+  src: url("/Style/fonts/NotoSansJP-Black.otf");
 }
 
 @font-face {
-  font-family: 'NotoSansJP-Black';
+  font-family: "BebasNeue-Regular";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/NotoSansJP-Black.otf");
+  src: url("/Style/fonts/BebasNeue-Regular.otf");
 }
 
 @font-face {
-  font-family: 'BebasNeue-Regular';
+  font-family: "din1451alt";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/BebasNeue-Regular.otf");
+  src: url("/Style/fonts/din1451alt.ttf");
 }
 
 @font-face {
-  font-family: 'din1451alt';
+  font-family: "din1451alt G";
   font-style: normal;
   font-weight: 400;
-  src:url("../../assets/fonts/din1451alt.ttf");
-}
-
-@font-face {
-  font-family: 'din1451alt G';
-  font-style: normal;
-  font-weight: 400;
-  src:url("../../assets/fonts/din1451alt G.ttf");
+  src: url("/Style/fonts/din1451alt G.ttf");
 }
 
 body {
@@ -69,5 +68,5 @@ body {
   font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体",
     "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif; // 游ゴシック系
 
-    font-family: 'NotoSansJP-Regular';
+  font-family: "NotoSansJP-Regular";
 }
