@@ -1,37 +1,56 @@
 import React from "react";
 import styled from "styled-components";
 
+const tasks = [
+  { id: 1, title: "one" },
+  { id: 2, title: "two" },
+  { id: 3, title: "three" },
+  { id: 4, title: "four" },
+  { id: 5, title: "five" }
+];
+
 const Main = () => {
   return (
     <div>
       <Inner className="inner">
-        <Title>サッポロビールさんのブランド<br />
-        HOPPIN' GARAGE(ホッピンガレージ)より<br />
-        河北の考えたビールを商品として<br />発売してもらう事になりました！</Title>
-        <Heading className="">HOPPIN' GARAGEって？</Heading>
-        <a href="https://www.hoppin-garage.com/" target="_blank" rel="noreferrer noopener">ブランドサイト https://www.hoppin-garage.com/</a>
-        <p>SAPPOROビールさんが手がけるブランドの１つで、<br />
-        募集したビールのアイデアや、ストーリーをビールにしちゃう割とクレイジーな企画ですww</p>
-        <a href="https://www.hoppin-garage.com/prototype/igusa/" target="_blank" rel="noreferrer noopener">試作品お披露目イベント https://www.hoppin-garage.com/prototype/igusa/</a>
-      </Inner>
-    </div>
+        <Content>
+          <Heading>
+            このページについて
+          </Heading>
+          <Text>
+            サッポロビールのブランド、HOPPIN' GARAGEへ
+            「い草」を使ったオリジナルビール案を応募したら
+            見事商品化されましたので、その宣伝になります。
+          </Text>
+          <Annotation>
+            ※なお、どんなに売れても私にインセンティブが入る等はありません。本当にただの応援ですｗ(あとサイト作りの練習です)
+            ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
+          </Annotation>
+        </Content>
+    </Inner>
+    </div >
   );
 };
 
 export default Main;
 
-const Inner = styled.div`
-  position: relative;
-  max-width: 1000px;
-  margin: auto;
+const Content = styled.div`
+  
 `;
-const Title = styled.h1`
+const Heading = styled.h1`
 font-size:30px;
 `;
-const Heading = styled.h2`
+
+const Text = styled.p`
 margin-top:30px;
 font-size:25px;
 `;
+
+const Annotation = styled.p`
+margin-top:30px;
+font-size:25px;
+`;
+
 
 
 
