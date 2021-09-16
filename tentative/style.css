@@ -4,13 +4,9 @@ body{
 font-family:NotoSansJP-Regular;
 }
 
-.inner{
-margin: 20px auto;
-
-}
 
 .wrap {
-   position: relative;
+    position: relative;
     width: 100%;
     height:100vh;
     background-image: url("assets/images/bg.jpg");
@@ -20,6 +16,10 @@ margin: 20px auto;
     background-color:rgba(255,255,255,0.8);
     background-blend-mode:lighten;
     
+}
+
+.inner{
+margin: 20px auto　0;
 }
 
 .title{
