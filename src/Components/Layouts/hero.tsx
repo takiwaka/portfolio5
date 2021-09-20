@@ -9,11 +9,11 @@ const Hero = () => {
         <Heading>
           畳の原料「い草」でビールを作れば
           <br />
-          苦くて旨いのができるじゃね？と
+          苦旨なのができるんじゃね？と
           <br />
-          サッポロビールさんに応募した所、
+          SAPPOROさんに応募した所、
           <br />
-          採用されて商品化までしちゃった件
+          商品化までした件
         </Heading>
         <Arrow>↓SCROLL</Arrow>
       </Content>
@@ -33,6 +33,7 @@ const Content = styled.div`
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
+  font-family: LightNovelPOPv2;
 
 `;
 
@@ -44,7 +45,7 @@ const Heading = styled.h1`
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
   ${media.lessThan("small")`
- font-size:1rem;
+  font-size:1rem;
   `}
 `;
 
@@ -53,6 +54,6 @@ const Arrow = styled.div`
   bottom: 10px;
   left: 50%;
   transform: translate(-50%);
-  font-family: din1451alt;
+  font-family: LightNovelPOPv2;
   font-size: 2rem;
 `;
