@@ -12,7 +12,7 @@ const tasks = [
 const Main = () => {
   return (
     <div>
-      <Inner className="inner">
+      <Inner>
         <Content>
           <Heading>
             このページについて
@@ -59,8 +59,9 @@ console.log(tasks);
 export default Main;
 
 const Inner = styled.div`
-  
+
 `;
+
 const Content = styled.div`
   
 `;

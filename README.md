@@ -15,7 +15,7 @@ http://13.114.58.181/
 
 ・TypeScript
 
-・
+・styled-components
 
 ## 過去導入
 ### ポートフォリオ１
