@@ -33,17 +33,17 @@ const Content = styled.div`
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.8);
   background-blend-mode: lighten;
-  font-family: LightNovelPOPv2;
-
-`;
-
-const Heading = styled.h1`
+  
+  `;
+  
+  const Heading = styled.h1`
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
+  font-family: LightNovelPOPv2;
   ${media.lessThan("small")`
   font-size:1rem;
   `}
