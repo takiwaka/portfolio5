@@ -1,19 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
-const tasks = [
-  {
-    id: 1,
-    heading: "このページについて",
-    text: "サッポロビールのブランド、HOPPIN' GARAGEへ<br />「い草」を使ったオリジナルビール案を応募したら<br />見事商品化されましたので、その宣伝です。",
-    annotation:
-      "※なお、どんなに売れても私にインセンティブが入る等はありません。本当にただの応援ですｗ(あとサイト作りの練習です)<br />※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)",
-  },
-  { id: 2, title: "two" },
-  { id: 3, title: "three" },
-  { id: 4, title: "four" },
-  { id: 5, title: "five" },
-];
+import media from "styled-media-query";
 
 const Main = () => {
   return (
@@ -29,11 +16,12 @@ const Main = () => {
             見事商品化されましたので、その宣伝です。
           </Text>
 
-          <Annotation>
+          <Capture>
             ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
             <br />
+            <br />
             ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
-          </Annotation>
+          </Capture>
         </Content>
 
         <Content>
@@ -45,7 +33,7 @@ const Main = () => {
             <br />
             （過去の商品はおむすび専用ビール、チョコミントビア、ボードゲーム用ビール等々……）
           </Text>
-          <Annotation>
+          <Capture>
             ～note抜粋～
             <br />
             「できたらいいな。を、つくろう」を合言葉に、
@@ -59,17 +47,22 @@ const Main = () => {
             公式サイト https://www.hoppin-garage.com/
             <br />
             公式note https://note.com/hoppin_garage
-          </Annotation>
+          </Capture>
         </Content>
 
         <Content>
           <Heading>なんで「い草」？</Heading>
           <Text>
             自分が熊本出身でして、（熊本県は畳の原料である「い草」が全国シェア90％）
+            <br />
             青汁等、食用のい草もある事を知っており、さらにはなんか苦そうなので
+            <br />
             ビールの苦みの素であるホップの代わりにもなるんじゃないかな～。と思い応募しました。
-            ２０１９年の試作品お披露目会では、九州の畳関係者もいらっしゃる、凄い盛り上がるイベントとなりました。
+            <br />
+            ２０１９年の試作品お披露目会では、九州の畳関係者もいらっしゃる、盛り上がるイベントとなりました。
+            <br />
             イベントレポートhttps://blog.kitchhike.com/hoppin-garage07/?source=hpg-web
+            <br />
             まさか本当に商品化するとは……
           </Text>
         </Content>
@@ -90,40 +83,60 @@ const Main = () => {
         <Content>
           <Heading>どこで買える？</Heading>
           <Text>
-            公式ECサイト
-            https://shop.hoppin-garage.com/merchandises?_ga=2.185629353.1073439917.1631773714-164930450.1630459156
+            <a
+              href="https://shop.hoppin-garage.com/merchandises?_ga=2.185629353.1073439917.1631773714-164930450.1630459156"
+              target="_brank" rel="noopener"
+            >
+              公式ECサイト
+            </a>
           </Text>
           <Text>
-            amazonのブランドサイト
-            https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln
+            <a href="https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln"
+            target="_brank" rel="noopener"
+            >
+              amazonのブランドサイト
+            </a>
           </Text>
-          <Annotation>
+          <Capture>
             なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さい。
-          </Annotation>
+          </Capture>
         </Content>
       </Inner>
     </div>
   );
 };
 
-console.log(tasks);
-
 export default Main;
 
-const Inner = styled.div``;
+const Inner = styled.div`
 
-const Content = styled.div``;
+`;
+
+const Content = styled.div`
+  width: 80%;
+  margin: 100px auto 0;
+  border: 1px solid Black;
+`;
+
 const Heading = styled.h1`
-margin-top: 100px;
-  font-size: 30px;
+  font-size: 1.8rem;
+  ${media.lessThan("small")`
+  font-size:1.5rem;
+  `}
 `;
 
 const Text = styled.p`
   margin-top: 30px;
-  font-size: 25px;
+  font-size: 1.5rem;
+  ${media.lessThan("small")`
+  font-size:1.2rem;
+  `}
 `;
 
-const Annotation = styled.p`
+const Capture = styled.p`
   margin-top: 30px;
-  font-size: 25px;
+  font-size: 1.2rem;
+  ${media.lessThan("small")`
+  font-size:1rem;
+  `}
 `;
