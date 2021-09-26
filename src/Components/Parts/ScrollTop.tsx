@@ -1,20 +1,48 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
 
 export const ScrollTop: React.FC = () => {
-    return <Button onClick={scroll} />;
+  const [isTop, setIsTop] = useState<boolean>(true);
+
+  const onScroll = (): void => {
+    if (getTop() >= 100) {
+      setIsTop(false);
+    } else {
+      setIsTop(true);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("scroll", onScroll);
+    return (): void => document.removeEventListener("scroll", onScroll);
+  });
+
+  return (
+    <Button
+      style={[isTop ? { backgroundColor: "#fff" } : ""]}
+      onClick={scroll}
+    />
+  );
 };
 
+const getTop = (): number =>
+  Math.max(
+    window.pageYOffset,
+    document.documentElement.scrollTop,
+    document.body.scrollTop
+  );
+
 const scroll = (): void => {
+  typeof window !== "undefined" &&
     window.scroll({
-        top: 0, // 最上部へスクロール
-        behavior: 'smooth',
+      top: 0, // 最上部へスクロール
+      behavior: "smooth",
     });
 };
 
 const Button = styled.div`
-  background-image: url('assets/images/arrow.png');
+  background-image: url("assets/images/arrow.png");
   cursor: pointer;
   position: fixed;
   right: 5%;
@@ -30,4 +58,9 @@ const Button = styled.div`
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
   `}
+`;
+const HideScrollToTop = css`
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
 `;
