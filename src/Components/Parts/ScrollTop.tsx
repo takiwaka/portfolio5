@@ -1,8 +1,8 @@
 import React from "react";
-import Styled from "styled-components";
+import styled from "styled-components";
 import media from "styled-media-query";
 
-export const ScrollToTop: React.FC = () => {
+export const ScrollTop: React.FC = () => {
     return <Button onClick={scroll} />;
 };
 
@@ -14,7 +14,7 @@ const scroll = (): void => {
 };
 
 const Button = styled.div`
-  background-image: url('assets/images/bg.jpg');
+  background-image: url('assets/images/arrow.png');
   cursor: pointer;
   position: fixed;
   right: 5%;
