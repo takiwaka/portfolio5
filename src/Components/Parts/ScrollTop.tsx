@@ -18,12 +18,11 @@ export const ScrollTop: React.FC = () => {
     return (): void => document.removeEventListener("scroll", onScroll);
   });
 
-  return (
-    <Button
-      style={[isTop ? { backgroundColor: "#fff" } : ""]}
-      onClick={scroll}
-    />
-  );
+  const scrollStyle: React.CSSProperties = isTop
+    ? { visibility: "hidden", opacity: "0" }
+    : {};
+
+  return <Button style={scrollStyle} onClick={scroll} />;
 };
 
 const getTop = (): number =>
@@ -50,8 +49,8 @@ const Button = styled.div`
   min-width: 48px;
   min-height: 48px;
   z-index: 100;
-  transition: opacity 1s, visibility 1s, transform 0.5s;
   opacity: 0.5;
+  transition: opacity 1s, visibility 1s, transform 0.5s;
   visibility: visible;
   ${media.greaterThan("small")`
   &:hover {
@@ -59,8 +58,9 @@ const Button = styled.div`
     -webkit-transform: scale(1.2);
   `}
 `;
-const HideScrollToTop = css`
-  z-index: 0;
-  opacity: 0;
-  visibility: hidden;
-`;
+
+// const HideScrollToTop = css`
+//   z-index: 0;
+//   opacity: 0;
+//   visibility: hidden;
+// `;
