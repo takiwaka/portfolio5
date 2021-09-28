@@ -24,4 +24,7 @@ const Container = styled.div`
   width: 100%;
   height:100%;
   overflow:hidden;
+  background-image: url("assets/images/tatami01.jpg");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
 `;

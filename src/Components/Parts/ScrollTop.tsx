@@ -42,6 +42,7 @@ const scroll = (): void => {
 
 const Button = styled.div`
   background-image: url("assets/images/arrow.png");
+  background-size: cover;
   cursor: pointer;
   position: fixed;
   right: 5%;

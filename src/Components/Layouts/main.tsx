@@ -119,7 +119,6 @@ const Inner = styled.div`
 const Content = styled.div`
   width: 80%;
   margin: 100px auto 0;
-  border: 1px solid Black;
 `;
 
 const Heading = styled.h1`
