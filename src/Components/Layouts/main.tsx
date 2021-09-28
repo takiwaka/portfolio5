@@ -18,8 +18,6 @@ const Main = () => {
 
           <Capture>
             ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
-            <br />
-            <br />
             ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
           </Capture>
         </Content>
@@ -44,9 +42,21 @@ const Main = () => {
             <br />
             これまでの発想に捉われない「新しいビールの楽しみ方」を続々とお届けします。
             <br />
-            公式サイト https://www.hoppin-garage.com/
+            <Link
+              href="https://www.hoppin-garage.com/ "
+              target="_brank" rel="noopener"
+            >
+              公式サイト https://www.hoppin-garage.com
+            </Link>
+
             <br />
-            公式note https://note.com/hoppin_garage
+            <Link
+              href="https://note.com/hoppin_garage"
+              target="_brank" rel="noopener"
+            >
+              公式note https://note.com/hoppin_garage
+
+            </Link>
           </Capture>
         </Content>
 
@@ -61,7 +71,14 @@ const Main = () => {
             <br />
             ２０１９年の試作品お披露目会では、九州の畳関係者もいらっしゃる、盛り上がるイベントとなりました。
             <br />
-            イベントレポートhttps://blog.kitchhike.com/hoppin-garage07/?source=hpg-web
+            <Link
+              href=" https://blog.kitchhike.com/hoppin-garage07/?source=hpg-web"
+              target="_brank" rel="noopener"
+            >
+              イベントレポート https://blog.kitchhike.com/hoppin-garage07/?source=hpg-web
+
+            </Link>
+
             <br />
             まさか本当に商品化するとは……
           </Text>
@@ -83,23 +100,20 @@ const Main = () => {
         <Content>
           <Heading>どこで買える？</Heading>
           <Text>
-            <Link>
-            <a
+            <Link
               href="https://shop.hoppin-garage.com/merchandises?_ga=2.185629353.1073439917.1631773714-164930450.1630459156"
               target="_brank" rel="noopener"
             >
               公式ECサイト
-            </a>
+
             </Link>
           </Text>
           <Text>
-            <Link>
-            <a href="https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln"
-            target="_brank" rel="noopener"
+            <Link href="https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln"
+              target="_brank" rel="noopener"
             >
               amazonのブランドサイト
-            </a>
-              </Link>
+            </Link>
           </Text>
           <Capture>
             なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さい。
@@ -145,6 +159,6 @@ const Capture = styled.p`
   `}
 `;
 
-const Link = styled.p`
+const Link = styled.a`
 text-decoration: underline;
 `;

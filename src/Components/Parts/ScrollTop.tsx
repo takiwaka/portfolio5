@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from 'react';
+import Styled from "styled-components";
 import media from "styled-media-query";
 
-export const ScrollTop: React.FC = () => {
+
+export const ScrollToTop: React.FC = () => {
   const [isTop, setIsTop] = useState<boolean>(true);
 
   const onScroll = (): void => {
@@ -13,16 +14,8 @@ export const ScrollTop: React.FC = () => {
     }
   };
 
-  useEffect(() => {
-    document.addEventListener("scroll", onScroll);
-    return (): void => document.removeEventListener("scroll", onScroll);
-  });
+    return <Button onClick={scroll} />;
 
-  const scrollStyle: React.CSSProperties = isTop
-    ? { visibility: "hidden", opacity: "0" }
-    : {};
-
-  return <Button style={scrollStyle} onClick={scroll} />;
 };
 
 const getTop = (): number =>
@@ -41,7 +34,7 @@ const scroll = (): void => {
 };
 
 const Button = styled.div`
-  background-image: url("assets/images/arrow.png");
+  background-image: url('assets/images/arrow.png');
   cursor: pointer;
   position: fixed;
   right: 5%;
