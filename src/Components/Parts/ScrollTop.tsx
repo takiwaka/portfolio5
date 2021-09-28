@@ -58,9 +58,3 @@ const Button = styled.div`
     -webkit-transform: scale(1.2);
   `}
 `;
-
-// const HideScrollToTop = css`
-//   z-index: 0;
-//   opacity: 0;
-//   visibility: hidden;
-// `;
