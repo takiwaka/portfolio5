@@ -75,36 +75,40 @@ const Main = () => {
           </Text>
         </Content>
 
-        <Content>
-          <Heading>発売日</Heading>
-          <Text>10月12日12時～（予定）</Text>
-        </Content>
-
-        <Content>
-          <Heading>どこで買える？</Heading>
-          <Text>
-            <Link>
-            <a
-              href="https://shop.hoppin-garage.com/merchandises?_ga=2.185629353.1073439917.1631773714-164930450.1630459156"
-              target="_brank" rel="noopener"
-            >
-              公式ECサイト
-            </a>
-            </Link>
-          </Text>
-          <Text>
-            <Link>
-            <a href="https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln"
-            target="_brank" rel="noopener"
-            >
-              amazonのブランドサイト
-            </a>
+        <Notice>
+          <Content>
+            <Heading>発売日</Heading>
+            <Text>10月12日12時～（予定）</Text>
+          </Content>
+          <Content>
+            <Heading>どこで買える？</Heading>
+            <Text>
+              <Link>
+                <a
+                  href="https://shop.hoppin-garage.com/merchandises?_ga=2.185629353.1073439917.1631773714-164930450.1630459156"
+                  target="_brank"
+                  rel="noopener"
+                >
+                  公式ECサイト
+                </a>
               </Link>
-          </Text>
-          <Capture>
-            なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さい。
-          </Capture>
-        </Content>
+            </Text>
+            <Text>
+              <Link>
+                <a
+                  href="https://www.amazon.co.jp/stores/%EF%BC%A8%EF%BC%AF%EF%BC%B0%EF%BC%B0%EF%BC%A9%EF%BC%AE%E2%80%99%E3%80%80%EF%BC%A7%EF%BC%A1%EF%BC%B2%EF%BC%A1%EF%BC%A7%EF%BC%A5/page/EF3DB47E-CF0F-4B78-8234-1126DE0F9FE9?ref_=ast_bln"
+                  target="_brank"
+                  rel="noopener"
+                >
+                  amazonのブランドサイト
+                </a>
+              </Link>
+            </Text>
+            <Capture>
+              なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さい。
+            </Capture>
+          </Content>
+        </Notice>
       </Inner>
     </div>
   );
@@ -112,9 +116,7 @@ const Main = () => {
 
 export default Main;
 
-const Inner = styled.div`
-
-`;
+const Inner = styled.div``;
 
 const Content = styled.div`
   width: 80%;
@@ -122,7 +124,9 @@ const Content = styled.div`
 `;
 
 const Heading = styled.h1`
+  color: #20383d;
   font-size: 1.8rem;
+  font-weight: bold;
   ${media.lessThan("small")`
   font-size:1.5rem;
   `}
@@ -145,5 +149,10 @@ const Capture = styled.p`
 `;
 
 const Link = styled.p`
-text-decoration: underline;
+  text-decoration: underline;
+`;
+
+const Notice = styled.div`
+  background-color: #f2f982;
+  border: solid 5px #20383d;
 `;

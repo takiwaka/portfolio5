@@ -50,12 +50,11 @@ const Button = styled.div`
   min-width: 48px;
   min-height: 48px;
   z-index: 100;
-  opacity: 0.5;
+  opacity: .9;
   transition: opacity 1s, visibility 1s, transform 0.5s;
   visibility: visible;
   ${media.greaterThan("small")`
   &:hover {
     transform: scale(1.2);
-    -webkit-transform: scale(1.2);
   `}
 `;

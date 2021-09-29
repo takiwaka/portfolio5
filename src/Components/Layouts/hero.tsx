@@ -38,11 +38,14 @@ const Content = styled.div`
 `;
 
 const Image = styled.div`
-  height: 50%;
-  background-image: url("assets/images/bg.jpg");
+  height: 70%;
+  /* background-image: url("assets/images/bg.jpg"); */
   background: linear-gradient(top,#20383d),url("assets/images/bg.jpg");
+  background: linear-gradient(to top, #20383d, rgba(255, 255, 255, 0)),
+  url("assets/images/bg.jpg");
+  background-size: cover;
   background-position: center center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #20383d;
 `;
