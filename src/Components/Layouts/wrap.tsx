@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Hero from "Components/Layouts/hero"
-import Main from "Components/Layouts/main";
+import Header from "Components/Layouts/Header";
+import Hero from "Components/Layouts/Hero"
+import Main from "Components/Layouts/Main";
 import { ScrollTop } from "Components/Parts/ScrollTop";
 
 
@@ -10,6 +11,7 @@ const Wrap = () => {
     <div>
       <Container>
         <ScrollTop />
+        <Header />
         <Hero />
         <Main />
       </Container>

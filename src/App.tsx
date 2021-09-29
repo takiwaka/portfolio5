@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Wrap from "Components/Layouts/wrap";
+import Wrap from "Components/Layouts/Wrap";
 import Game from "Components/Tutorial/Game";
 import Loader from "react-loader-spinner";
 import styled from "styled-components";

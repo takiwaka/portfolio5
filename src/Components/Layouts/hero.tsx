@@ -6,6 +6,7 @@ const Hero = () => {
   return (
     <div>
       <Content className="hero">
+        <Image />
         <Heading>
           畳の原料「い草」
           <br />
@@ -21,7 +22,7 @@ const Hero = () => {
           <br />
           商品化までした件
         </Heading>
-        <Arrow>↓SCROLL</Arrow>
+        <Arrow>↓</Arrow>
       </Content>
     </div>
   );
@@ -33,12 +34,17 @@ const Content = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+  background-color: #20383d;
+`;
+
+const Image = styled.div`
+  height: 50%;
   background-image: url("assets/images/bg.jpg");
+  background: linear-gradient(top,#20383d),url("assets/images/bg.jpg");
   background-position: center center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
-  background-color: rgba(255, 255, 255, 0.8);
-  background-blend-mode: lighten;
+  background-color: #20383d;
 `;
 
 const Heading = styled.h1`
@@ -51,7 +57,6 @@ const Heading = styled.h1`
   background-color: rgba(255, 255, 255, 0.8);
   font-size: 2rem;
   font-family: LightNovelPOPv2;
-
   white-space: nowrap;
 
   ${media.lessThan("small")`
@@ -62,12 +67,12 @@ const Heading = styled.h1`
 
 const Arrow = styled.div`
   position: absolute;
-  bottom: 0;
+  top: 75%;
   left: 50%;
   transform: translate(-50%);
   font-family: LightNovelPOPv2;
   font-size: 2rem;
-
+  color: white;
   ${media.lessThan("small")`
   bottom:50px;
 
