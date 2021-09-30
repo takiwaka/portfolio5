@@ -15,6 +15,7 @@ const Wrap = () => {
         <Header />
         <Hero />
         <Main />
+        <Footer />
       </Container>
     </div>
   );
