@@ -44,9 +44,25 @@ const Main = () => {
             <br />
             これまでの発想に捉われない「新しいビールの楽しみ方」を続々とお届けします。
             <br />
-            公式サイト https://www.hoppin-garage.com/
+            <Link>
+              <a
+                href="https://www.hoppin-garage.com"
+                target="_brank"
+                rel="noopener"
+              >
+                公式サイト https://www.hoppin-garage.com
+              </a>
+            </Link>
             <br />
-            公式note https://note.com/hoppin_garage
+            <Link>
+              <a
+                href="https://note.com/hoppin_garage"
+                target="_brank"
+                rel="noopener"
+              >
+                公式note https://note.com/hoppin_garage
+              </a>
+            </Link>
           </Capture>
         </Content>
 
@@ -61,7 +77,15 @@ const Main = () => {
             <br />
             ２０１９年の試作品お披露目会では、九州の畳関係者もいらっしゃる、盛り上がるイベントとなりました。
             <br />
-            イベントレポートhttps://blog.kitchhike.com/hoppin-garage07/?source=hpg-web
+            <Link>
+              <a
+                href="https://blog.kitchhike.com/hoppin-garage07/?source=hpg-web"
+                target="_brank"
+                rel="noopener"
+              >
+                イベントレポート
+              </a>
+            </Link>
             <br />
             まさか本当に商品化するとは……
           </Text>
@@ -105,7 +129,7 @@ const Main = () => {
               </Link>
             </Text>
             <Capture>
-              なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さい。
+              なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さいw
             </Capture>
           </Content>
         </Notice>
@@ -120,7 +144,7 @@ const Inner = styled.div``;
 
 const Content = styled.div`
   width: 80%;
-  margin: 100px auto 0;
+  margin: 50px auto 0;
 `;
 
 const Heading = styled.h1`
@@ -153,6 +177,10 @@ const Link = styled.p`
 `;
 
 const Notice = styled.div`
+  max-width: 400px;
+  margin: 50px auto;
   background-color: #f2f982;
   border: solid 5px #20383d;
+  border-radius: 5%;
+  padding-bottom: 30px;
 `;

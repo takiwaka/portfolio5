@@ -5,7 +5,9 @@ import Styled from "styled-components";
 
 const Footer = () => {
   return (
-    <Div />
+    <Div>
+      <p>Copyright © takiwaka</p>
+      </Div>
   );
 };
 
@@ -17,4 +19,7 @@ const Div = Styled.div`
   overflow:hidden;
   background-color: rgb(32, 56, 61);
   background-blend-mode: lighten;
+  color:white;
+  text-align:right;
+
 `;

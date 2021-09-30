@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Wrap from "Components/Layouts/Wrap";
-import Game from "Components/Tutorial/Game";
+
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
 
@@ -29,7 +29,6 @@ function App() {
       ) : (
         <>
           <Wrap />
-          <Game />
         </>
       )}
     </div>
@@ -39,9 +38,8 @@ function App() {
 export default App;
 
 const Content = styled.div`
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;

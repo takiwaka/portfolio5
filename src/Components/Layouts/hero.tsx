@@ -7,6 +7,7 @@ const Hero = () => {
     <div>
       <Content className="hero">
         <Image />
+        <Gradation />
         <Heading>
           畳の原料「い草」
           <br />
@@ -22,7 +23,7 @@ const Hero = () => {
           <br />
           商品化までした件
         </Heading>
-        <Arrow>↓</Arrow>
+        <Arrow />
       </Content>
     </div>
   );
@@ -38,17 +39,25 @@ const Content = styled.div`
 `;
 
 const Image = styled.div`
-  height: 70%;
-  /* background-image: url("assets/images/bg.jpg"); */
-  background: linear-gradient(top,#20383d),url("assets/images/bg.jpg");
-  background: linear-gradient(to top, #20383d, rgba(255, 255, 255, 0)),
-  url("assets/images/bg.jpg");
+  height: 55%;
+  background:
+    url("assets/images/bg.jpg");
   background-size: cover;
   background-position: center center;
-  background-size: cover;
+
   background-repeat: no-repeat;
   background-color: #20383d;
+  backdrop-filter: contrast(200%);
 `;
+
+const Gradation = styled.div`
+position: relative;
+top:-10%;
+height: 10vh;
+background: linear-gradient(to top, #20383d, rgba(32, 56, 61, 0));
+`;
+
+
 
 const Heading = styled.h1`
   position: absolute;
@@ -57,7 +66,7 @@ const Heading = styled.h1`
   transform: translate(-50%, -50%);
   width: 300px;
   padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.7);
   font-size: 2rem;
   font-family: LightNovelPOPv2;
   white-space: nowrap;
@@ -72,12 +81,10 @@ const Arrow = styled.div`
   position: absolute;
   top: 75%;
   left: 50%;
+  width: 50px;
+  height: 50px;
   transform: translate(-50%);
-  font-family: LightNovelPOPv2;
-  font-size: 2rem;
-  color: white;
-  ${media.lessThan("small")`
-  bottom:50px;
-
-  `}
+  background-image: url("assets/images/arrow-white.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 `;
