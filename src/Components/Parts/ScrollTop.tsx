@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
+import "scroll-behavior-polyfill";
 
 export const ScrollTop: React.FC = () => {
   const [isTop, setIsTop] = useState<boolean>(true);
@@ -33,9 +34,8 @@ const getTop = (): number =>
   );
 
 const scroll = (): void => {
-  typeof window !== "undefined" &&
     window.scroll({
-      top: 0, // 最上部へスクロール
+      top: 0,
       behavior: "smooth",
     });
 };
