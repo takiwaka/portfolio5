@@ -24,6 +24,7 @@ const Hero = () => {
           商品化までした件
         </Heading>
         <Arrow />
+        <Beer src="assets/images/beer.png" />
       </Content>
     </div>
   );
@@ -57,8 +58,6 @@ height: 10vh;
 background: linear-gradient(to top, #20383d, rgba(32, 56, 61, 0));
 `;
 
-
-
 const Heading = styled.h1`
   position: absolute;
   top: 50%;
@@ -79,7 +78,7 @@ const Heading = styled.h1`
 
 const Arrow = styled.div`
   position: absolute;
-  top: 75%;
+  top: 72%;
   left: 50%;
   width: 50px;
   height: 50px;
@@ -87,4 +86,12 @@ const Arrow = styled.div`
   background-image: url("assets/images/arrow-white.png");
   background-size: contain;
   background-repeat: no-repeat;
+`;
+
+const Beer = styled.img`
+position: absolute;
+left: 50%;
+bottom: -20%;
+transform: translate(-55%);
+height: 40vh;
 `;

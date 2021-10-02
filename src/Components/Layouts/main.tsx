@@ -86,9 +86,10 @@ const Main = () => {
                 イベントレポート
               </a>
             </Link>
-            <br />
-            まさか本当に商品化するとは……
-          </Text>
+           </Text>
+          <Capture>
+          まさか本当に商品化するとは……
+            </Capture>
         </Content>
 
         <Content>
@@ -140,7 +141,9 @@ const Main = () => {
 
 export default Main;
 
-const Inner = styled.div``;
+const Inner = styled.div`
+margin-top:30vh;
+`;
 
 const Content = styled.div`
   width: 80%;
@@ -177,6 +180,7 @@ const Link = styled.p`
 `;
 
 const Notice = styled.div`
+width: 95vw;
   max-width: 400px;
   margin: 50px auto;
   background-color: #f2f982;

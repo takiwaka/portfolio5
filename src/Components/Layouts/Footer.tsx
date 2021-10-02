@@ -6,7 +6,7 @@ import Styled from "styled-components";
 const Footer = () => {
   return (
     <Div>
-      <p>Copyright © takiwaka</p>
+      <p>Copyright © 2021 takiwaka</p>
       </Div>
   );
 };
