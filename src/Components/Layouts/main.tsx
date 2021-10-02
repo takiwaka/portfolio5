@@ -1,27 +1,38 @@
 import React from "react";
 import styled from "styled-components";
 import media from "styled-media-query";
+import { useInView } from "react-intersection-observer";
 
 const Main = () => {
+  const { ref, inView } = useInView({
+    // オプション
+    rootMargin: "-200px", // ref要素が現れてから50px過ぎたら
+    triggerOnce: true, // 最初の一度だけ実行
+  });
+
   return (
     <div>
       <Inner>
-        <Content>
-          <Heading>このページについて</Heading>
-          <Text>
-            サッポロビールのブランド、HOPPIN' GARAGEへ
-            <br />
-            「い草」を使ったオリジナルビール案を応募したら
-            <br />
-            見事商品化されましたので、その宣伝です。
-          </Text>
+        <Content ref={ref}>
+          {inView && (
+            <div>
+              <Heading>このページについて</Heading>
+              <Text>
+                サッポロビールのブランド、HOPPIN' GARAGEへ
+                <br />
+                「い草」を使ったオリジナルビール案を応募したら
+                <br />
+                見事商品化されましたので、その宣伝です。
+              </Text>
 
-          <Capture>
-            ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
-            <br />
-            <br />
-            ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
-          </Capture>
+              <Capture>
+                ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
+                <br />
+                <br />
+                ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
+              </Capture>
+            </div>
+          )}
         </Content>
 
         <Content>
@@ -86,10 +97,8 @@ const Main = () => {
                 イベントレポート
               </a>
             </Link>
-           </Text>
-          <Capture>
-          まさか本当に商品化するとは……
-            </Capture>
+          </Text>
+          <Capture>まさか本当に商品化するとは……</Capture>
         </Content>
 
         <Content>
@@ -106,6 +115,7 @@ const Main = () => {
             <Text>10月12日12時～（予定）</Text>
           </Content>
           <Content>
+              <div className="" style={{ height: '10px' }}></div>
             <Heading>どこで買える？</Heading>
             <Text>
               <Link>
@@ -132,6 +142,7 @@ const Main = () => {
             <Capture>
               なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さいw
             </Capture>
+<div className="" style={{ height: '10px' }}></div>
           </Content>
         </Notice>
       </Inner>
@@ -142,18 +153,20 @@ const Main = () => {
 export default Main;
 
 const Inner = styled.div`
-margin-top:30vh;
+  margin-top: 30vh;
 `;
 
 const Content = styled.div`
-  width: 80%;
+  width: 90%;
+  max-width: 1000px;
   margin: 50px auto 0;
+  color: #20383d;
 `;
 
-const Heading = styled.h1`
-  color: #20383d;
+const Heading = styled.h2`
+  font-family: "NotoSansJP-Bold";
   font-size: 1.8rem;
-  font-weight: bold;
+  font-weight: 400;
   ${media.lessThan("small")`
   font-size:1.5rem;
   `}
@@ -177,14 +190,15 @@ const Capture = styled.p`
 
 const Link = styled.p`
   text-decoration: underline;
+  color: #219c09;
 `;
 
 const Notice = styled.div`
-width: 95vw;
-  max-width: 400px;
+  width: 90%;
+  max-width: 1000px;
   margin: 50px auto;
   background-color: #f2f982;
   border: solid 5px #20383d;
-  border-radius: 5%;
+  border-radius: 50px;
   padding-bottom: 30px;
 `;

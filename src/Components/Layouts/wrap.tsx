@@ -31,4 +31,5 @@ const Container = styled.div`
   background-image: url("assets/images/tatami01.jpg");
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
+
 `;

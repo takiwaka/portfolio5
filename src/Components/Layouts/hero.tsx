@@ -6,22 +6,12 @@ const Hero = () => {
   return (
     <div>
       <Content className="hero">
-        <Image />
-        <Gradation />
-        <Heading>
-          畳の原料「い草」
+        <Image className="image" />
+        <Gradation className="gradation" />
+        <Heading className="heading">
+          畳の原料「い草」でビールを作れば苦くて旨いのができるんじゃね？
           <br />
-          でビールを作れば
-          <br />
-          苦くて旨いのが
-          <br />
-          できるんじゃね？と
-          <br />
-          SAPPOROさんに
-          <br />
-          応募したら、
-          <br />
-          商品化までした件
+          とSAPPOROさんに応募したら、商品化までした件。
         </Heading>
         <Arrow />
         <Beer src="assets/images/beer.png" />
@@ -41,40 +31,39 @@ const Content = styled.div`
 
 const Image = styled.div`
   height: 55%;
-  background:
-    url("assets/images/bg.jpg");
+  background: url("assets/images/bg.jpg");
   background-size: cover;
   background-position: center center;
-
   background-repeat: no-repeat;
   background-color: #20383d;
   backdrop-filter: contrast(200%);
 `;
 
 const Gradation = styled.div`
-position: relative;
-top:-10%;
-height: 10vh;
-background: linear-gradient(to top, #20383d, rgba(32, 56, 61, 0));
+  position: relative;
+  top: -10%;
+  height: 10vh;
+  background: linear-gradient(to top, #20383d, rgba(32, 56, 61, 0));
 `;
 
 const Heading = styled.h1`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
+  position: relative;
+  top: -30%;
+  margin: 0 auto;
   padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.7);
   font-size: 2rem;
   font-family: LightNovelPOPv2;
-  white-space: nowrap;
-
+  text-justify: inter-character;
+  max-width: 400px;
+  
   ${media.lessThan("small")`
+  top: -35%;
   font-size:1.8rem;
+  max-width: 80vw;
   width: 280px;
   `}
-`;
+  `;
 
 const Arrow = styled.div`
   position: absolute;
@@ -89,9 +78,9 @@ const Arrow = styled.div`
 `;
 
 const Beer = styled.img`
-position: absolute;
-left: 50%;
-bottom: -20%;
-transform: translate(-55%);
-height: 40vh;
+  position: absolute;
+  left: 50%;
+  bottom: -20%;
+  transform: translate(-55%);
+  height: 40vh;
 `;
