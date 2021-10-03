@@ -13,10 +13,11 @@ const Main = () => {
   return (
     <div>
       <Inner>
-        <Content ref={ref}>
+        <Content ref={ref} >
           {inView && (
-            <div>
               <Heading>このページについて</Heading>
+              )}
+            <div>
               <Text>
                 サッポロビールのブランド、HOPPIN' GARAGEへ
                 <br />
@@ -32,7 +33,6 @@ const Main = () => {
                 ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
               </Capture>
             </div>
-          )}
         </Content>
 
         <Content>
