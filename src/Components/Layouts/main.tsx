@@ -1,11 +1,10 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from 'styled-components';
 import media from "styled-media-query";
 import { useInView } from "react-intersection-observer";
 
 const Main = () => {
   const { ref, inView } = useInView({
-    // オプション
     rootMargin: "-200px", // ref要素が現れてから50px過ぎたら
     triggerOnce: true, // 最初の一度だけ実行
   });
@@ -161,12 +160,17 @@ const Content = styled.div`
   max-width: 1000px;
   margin: 50px auto 0;
   color: #20383d;
+
+  animation: ${fadeIn} .5s ease-in-out;
 `;
 
 const Heading = styled.h2`
   font-family: "NotoSansJP-Bold";
   font-size: 1.8rem;
   font-weight: 400;
+
+  animation: ${fadeIn} .5s ease-in-out;
+
   ${media.lessThan("small")`
   font-size:1.5rem;
   `}
@@ -201,4 +205,17 @@ const Notice = styled.div`
   border: solid 5px #20383d;
   border-radius: 50px;
   padding-bottom: 30px;
+`;
+
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+const FadeIn = styled.div`
+  animation: ${fadeIn} .5s ease-in-out;
 `;

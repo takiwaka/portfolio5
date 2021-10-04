@@ -4,7 +4,7 @@ import Header from "Components/Layouts/Header";
 import Hero from "Components/Layouts/Hero"
 import Main from "Components/Layouts/Main";
 import Footer from "Components/Layouts/Footer";
-import { ScrollTop } from "Components/Parts/ScrollTop";
+import ScrollTop from "Components/Parts/ScrollTop";
 
 
 const Wrap = () => {
