@@ -26,6 +26,7 @@ const Content = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 500px;
   background-color: #20383d;
 `;
 
@@ -41,8 +42,8 @@ const Image = styled.div`
 
 const Gradation = styled.div`
   position: relative;
-  top: -10%;
-  height: 10vh;
+  top: -50px;
+  height: 50px;
   background: linear-gradient(to top, #20383d, rgba(32, 56, 61, 0));
 `;
 
@@ -83,4 +84,5 @@ const Beer = styled.img`
   bottom: -20%;
   transform: translate(-55%);
   height: 40vh;
+  min-height: 200px;
 `;
