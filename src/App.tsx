@@ -19,10 +19,10 @@ function App() {
           <Content>
             <Loader
               type="Puff"
-              color="#007bbb"
-              height={128}
-              width={128}
-              timeout={3000}
+              color="#20383d"
+              height={300}
+              width={300}
+              timeout={5000}
             />
           </Content>
         </>
