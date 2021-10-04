@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 import media from "styled-media-query";
 import { useInView } from "react-intersection-observer";
 
@@ -12,26 +12,24 @@ const Main = () => {
   return (
     <div>
       <Inner>
-        <Content ref={ref} >
-          {inView && (
-              <Heading>このページについて</Heading>
-              )}
-            <div>
-              <Text>
-                サッポロビールのブランド、HOPPIN' GARAGEへ
-                <br />
-                「い草」を使ったオリジナルビール案を応募したら
-                <br />
-                見事商品化されましたので、その宣伝です。
-              </Text>
+        <Content ref={ref}>
+          {inView && <Heading>このページについて</Heading>}
+          <div>
+            <Text>
+              サッポロビールのブランド、HOPPIN' GARAGEへ
+              <br />
+              「い草」を使ったオリジナルビール案を応募したら
+              <br />
+              見事商品化されましたので、その宣伝です。
+            </Text>
 
-              <Capture>
-                ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
-                <br />
-                <br />
-                ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
-              </Capture>
-            </div>
+            <Capture>
+              ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
+              <br />
+              <br />
+              ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
+            </Capture>
+          </div>
         </Content>
 
         <Content>
@@ -114,7 +112,7 @@ const Main = () => {
             <Text>10月12日12時～（予定）</Text>
           </Content>
           <Content>
-              <div className="" style={{ height: '10px' }}></div>
+            <div className="" style={{ height: "10px" }}></div>
             <Heading>どこで買える？</Heading>
             <Text>
               <Link>
@@ -141,7 +139,7 @@ const Main = () => {
             <Capture>
               なんか怪しいな……って人はサッポロビールの公式サイトや、「ホッピンガレージ」で検索して下さいw
             </Capture>
-<div className="" style={{ height: '10px' }}></div>
+            <div className="" style={{ height: "10px" }}></div>
           </Content>
         </Notice>
       </Inner>
@@ -150,6 +148,15 @@ const Main = () => {
 };
 
 export default Main;
+  const fadeIn = keyframes`
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  `;
+
 
 const Inner = styled.div`
   margin-top: 30vh;
@@ -161,7 +168,7 @@ const Content = styled.div`
   margin: 50px auto 0;
   color: #20383d;
 
-  animation: ${fadeIn} .5s ease-in-out;
+  animation: ${fadeIn} 0.5s ease-in-out;
 `;
 
 const Heading = styled.h2`
@@ -169,7 +176,7 @@ const Heading = styled.h2`
   font-size: 1.8rem;
   font-weight: 400;
 
-  animation: ${fadeIn} .5s ease-in-out;
+  animation: ${fadeIn} 0.5s ease-in-out;
 
   ${media.lessThan("small")`
   font-size:1.5rem;
@@ -207,15 +214,3 @@ const Notice = styled.div`
   padding-bottom: 30px;
 `;
 
-const fadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`;
-
-const FadeIn = styled.div`
-  animation: ${fadeIn} .5s ease-in-out;
-`;
