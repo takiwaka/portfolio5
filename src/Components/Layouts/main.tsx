@@ -12,67 +12,74 @@ const Main = () => {
   return (
     <div>
       <Inner>
-        <Content ref={ref}>
-          {inView && <Heading>このページについて</Heading>}
-          <div>
-            <Text>
-              サッポロビールのブランド、HOPPIN' GARAGEへ
-              <br />
-              「い草」を使ったオリジナルビール案を応募したら
-              <br />
-              見事商品化されましたので、その宣伝です。
-            </Text>
+        <div ref={ref}>
+          {inView && (
+            <Content>
+              <Heading>このページについて</Heading>
+              <div>
+                <Text>
+                  サッポロビールのブランド、HOPPIN' GARAGEへ
+                  <br />
+                  「い草」を使ったオリジナルビール案を応募したら
+                  <br />
+                  見事商品化されましたので、その宣伝です。
+                </Text>
 
-            <Capture>
-              ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
-              <br />
-              <br />
-              ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
-            </Capture>
-          </div>
-        </Content>
-
-        <Content>
-          <Heading>HOPPIN' GARAGE(ホッピンガレージ)とは</Heading>
-          <Text>
-            サッポロビールさんが手掛けるブランドで、
-            <br />
-            ビールのアイデアを募集して作ったり、人生ストーリーをビールにしたり等、かなり独創的なビールを作っています。
-            <br />
-            （過去の商品はおむすび専用ビール、チョコミントビア、ボードゲーム用ビール等々……）
-          </Text>
-          <Capture>
-            ～note抜粋～
-            <br />
-            「できたらいいな。を、つくろう」を合言葉に、
-            <br />
-            魅力的な人々の人生ストーリーをもとにしたビールづくりをはじめ、
-            <br />
-            絵本やゲーム、ラジオにイベントなど、
-            <br />
-            これまでの発想に捉われない「新しいビールの楽しみ方」を続々とお届けします。
-            <br />
-            <Link>
-              <a
-                href="https://www.hoppin-garage.com"
-                target="_brank"
-                rel="noopener"
-              >
-                公式サイト https://www.hoppin-garage.com
-              </a>
-            </Link>
-            <br />
-            <Link>
-              <a
-                href="https://note.com/hoppin_garage"
-                target="_brank"
-                rel="noopener"
-              >
-                公式note https://note.com/hoppin_garage
-              </a>
-            </Link>
-          </Capture>
-        </Content>
+                <Capture>
+                  ※なお、どんなに売れても私にインセンティブが入る等はありません。アフィリエイトもありません。本当にただの応援ですｗ
+                  <br />
+                  <br />
+                  ※い草がビールの原料として認められなかったため、酒税法上発泡酒の扱いとなります。(ここでは広義の解釈でビールと呼称しています)
+                </Capture>
+              </div>
+            </Content>
+          )}
+        </div>
+        <div ref={ref}>
+          {inView && (
+            <Content>
+              <Heading>HOPPIN' GARAGE(ホッピンガレージ)とは</Heading>
+              <Text>
+                サッポロビールさんが手掛けるブランドで、
+                <br />
+                ビールのアイデアを募集して作ったり、人生ストーリーをビールにしたり等、かなり独創的なビールを作っています。
+                <br />
+                （過去の商品はおむすび専用ビール、チョコミントビア、ボードゲーム用ビール等々……）
+              </Text>
+              <Capture>
+                ～note抜粋～
+                <br />
+                「できたらいいな。を、つくろう」を合言葉に、
+                <br />
+                魅力的な人々の人生ストーリーをもとにしたビールづくりをはじめ、
+                <br />
+                絵本やゲーム、ラジオにイベントなど、
+                <br />
+                これまでの発想に捉われない「新しいビールの楽しみ方」を続々とお届けします。
+                <br />
+                <Link>
+                  <a
+                    href="https://www.hoppin-garage.com"
+                    target="_brank"
+                    rel="noopener"
+                  >
+                    公式サイト https://www.hoppin-garage.com
+                  </a>
+                </Link>
+                <br />
+                <Link>
+                  <a
+                    href="https://note.com/hoppin_garage"
+                    target="_brank"
+                    rel="noopener"
+                  >
+                    公式note https://note.com/hoppin_garage
+                  </a>
+                </Link>
+              </Capture>
+            </Content>
+          )}
+        </div>
 
         <Content>
           <Heading>なんで「い草」？</Heading>
@@ -148,7 +155,7 @@ const Main = () => {
 };
 
 export default Main;
-  const fadeIn = keyframes`
+const fadeIn = keyframes`
     from {
       opacity: 0;
     }
@@ -156,7 +163,6 @@ export default Main;
       opacity: 1;
     }
   `;
-
 
 const Inner = styled.div`
   margin-top: 30vh;
@@ -167,8 +173,7 @@ const Content = styled.div`
   max-width: 1000px;
   margin: 50px auto 0;
   color: #20383d;
-
-  animation: ${fadeIn} 0.5s ease-in-out;
+  animation: ${fadeIn} 1s ease-in-out;
 `;
 
 const Heading = styled.h2`
@@ -186,6 +191,8 @@ const Heading = styled.h2`
 const Text = styled.p`
   margin-top: 30px;
   font-size: 1.5rem;
+  animation: ${fadeIn} 0.5s ease-in-out;
+
   ${media.lessThan("small")`
   font-size:1.2rem;
   `}
@@ -213,4 +220,3 @@ const Notice = styled.div`
   border-radius: 50px;
   padding-bottom: 30px;
 `;
-

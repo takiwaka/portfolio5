@@ -57,14 +57,14 @@ const Heading = styled.h1`
   font-family: LightNovelPOPv2;
   text-justify: inter-character;
   max-width: 400px;
-  
+
   ${media.lessThan("small")`
   top: -35%;
   font-size:1.8rem;
   max-width: 80vw;
   width: 280px;
   `}
-  `;
+`;
 
 const Arrow = styled.div`
   position: absolute;
