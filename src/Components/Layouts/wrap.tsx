@@ -25,9 +25,9 @@ export default Wrap;
 const Container = styled.div`
   position: relative;
   width: 100%;
-  height: 5000px;
+
   overflow: hidden;
   background-image: url("assets/images/tatami01.jpg");
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   background-blend-mode: lighten;
 `;

@@ -26,7 +26,7 @@ const Content = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  min-height: 500px;
+  min-height: 568px;
   background-color: #20383d;
 `;
 
