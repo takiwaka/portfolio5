@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Wrap from "Components/Layouts/Wrap";
-
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
 

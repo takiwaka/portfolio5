@@ -34,22 +34,22 @@ const getTop = (): number =>
   );
 
 const scroll = (): void => {
-    window.scroll({
-      top: 0,
-      behavior: "smooth",
-    });
+  window.scroll({
+    top: 0,
+    behavior: "smooth",
+  });
 };
 
 const Button = styled.div`
-  background-image: url("assets/images/arrow.png");
+　z-index: 100;
+　position: fixed;
+　right: 5%;
+　bottom: 5%;
+　min-width: 48px;
+　min-height: 48px;
+　background-image: url("assets/images/arrow.png");
   background-size: cover;
   cursor: pointer;
-  position: fixed;
-  right: 5%;
-  bottom: 5%;
-  min-width: 48px;
-  min-height: 48px;
-  z-index: 100;
   opacity: .9;
   transition: opacity 1s, visibility 1s, transform 0.5s;
   visibility: visible;

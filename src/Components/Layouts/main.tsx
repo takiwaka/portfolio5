@@ -5,8 +5,8 @@ import { useInView } from "react-intersection-observer";
 
 const Main = () => {
   const { ref, inView } = useInView({
-    rootMargin: "-100px", // ref要素が現れてから50px過ぎたら
-    triggerOnce: true, // 最初の一度だけ実行
+    rootMargin: "-100px",
+    triggerOnce: true,
   });
 
   return (
@@ -160,8 +160,8 @@ const fadeIn = keyframes`
   `;
 
 const Inner = styled.div`
+　min-height: 1000px;
   margin-top: 35vh;
-  min-height: 1000px;
 `;
 
 const Content = styled.div`
@@ -177,8 +177,6 @@ const Heading = styled.h2`
   font-size: 1.8rem;
   font-weight: 400;
 
-  animation: ${fadeIn} 0.5s ease-in-out;
-
   ${media.lessThan("small")`
   font-size:1.5rem;
   `}
@@ -187,7 +185,6 @@ const Heading = styled.h2`
 const Text = styled.p`
   margin-top: 30px;
   font-size: 1.5rem;
-  animation: ${fadeIn} 0.5s ease-in-out;
 
   ${media.lessThan("small")`
   font-size:1.2rem;
@@ -205,16 +202,16 @@ const Capture = styled.p`
 
 const Link = styled.p`
   margin-top: 15px;
-  text-decoration: underline;
   color: #219c09;
+  text-decoration: underline;
 `;
 
 const Notice = styled.div`
   width: 90%;
   max-width: 1000px;
   margin: 50px auto;
+  padding-bottom: 30px;
   background-color: #f2f982;
   border: solid 5px #20383d;
   border-radius: 50px;
-  padding-bottom: 30px;
 `;
