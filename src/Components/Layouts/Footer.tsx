@@ -1,8 +1,6 @@
 import React from "react";
 import Styled from "styled-components";
 
-
-
 const Footer = () => {
   return (
     <Div>
@@ -21,5 +19,4 @@ const Div = Styled.div`
   background-blend-mode: lighten;
   color:white;
   text-align:right;
-
 `;

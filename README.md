@@ -15,7 +15,7 @@ http://13.114.58.181/
 
 ・TypeScript
 
-・styled-components、styled-media-query
+・styled-components、styled-media-query、scroll-behavior-polyfill、react-intersection-observer
 
 ## 過去導入
 ### ポートフォリオ１
