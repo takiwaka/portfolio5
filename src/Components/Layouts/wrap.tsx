@@ -25,7 +25,6 @@ export default Wrap;
 const Container = styled.div`
   position: relative;
   width: 100%;
-
   overflow: hidden;
   background-image: url("assets/images/tatami01.jpg");
   background-color: rgba(255, 255, 255, 0.6);

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Wrap from "Components/Layouts/Wrap";
-
 import Loader from "react-loader-spinner";
 import styled from "styled-components";
 
@@ -15,7 +14,7 @@ function App() {
   return (
     <div>
       {loading ? (
-        <>
+        <BackGround>
           <Content>
             <Loader
               type="Puff"
@@ -25,7 +24,7 @@ function App() {
               timeout={5000}
             />
           </Content>
-        </>
+        </BackGround>
       ) : (
         <>
           <Wrap />
@@ -42,4 +41,9 @@ const Content = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`;
+const BackGround = styled.div`
+  width: 100vw;
+  height: 100vh;
+  background-image: url("assets/images/tatami01.jpg");
 `;
