@@ -5,7 +5,7 @@ https://takiwaka.com
 
 http://13.114.58.181/
 
-## 今回実装
+## 今回実装したこと
 
 ・AWS EC2にて構築(https化まで)
 
