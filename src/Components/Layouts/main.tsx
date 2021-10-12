@@ -167,7 +167,7 @@ const fadeIn = keyframes`
   `;
 
 const Inner = styled.div`
-　min-height: 1000px;
+  min-height: 1000px;
   margin-top: 35vh;
 `;
 
@@ -209,7 +209,7 @@ const Capture = styled.p`
 
 const Link = styled.p`
   margin-top: 15px;
-  color: #219c09;
+  color: #20383d;
   text-decoration: underline;
 `;
 
