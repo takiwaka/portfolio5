@@ -117,7 +117,7 @@ const Main = () => {
               <Notice>
                 <Content>
                   <Heading>発売日</Heading>
-                  <Text>10月12日12時～（予定）</Text>
+                  <Text>10月12日</Text>
                 </Content>
                 <Content>
                   <Heading>どこで買える？</Heading>
